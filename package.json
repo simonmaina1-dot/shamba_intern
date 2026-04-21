@@ -1,0 +1,13 @@
+{
+  "name": "shamba-intern",
+  "version": "1.0.0",
+  "description": "SmartSeason Field Monitoring System",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\"",
+    "setup": "npm i && cd backend && npm i && cd ../frontend && npm i",
+    "db-setup": "cd backend && npx prisma generate && npx prisma db push && node prisma/seed.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
